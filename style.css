@@ -1,156 +1,304 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/*Header styles*/
-header{
+
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: rgb(189, 87, 50)
+    color: rgb(189, 87, 50);
     height: 60px;
     padding: 10px;
-
 }
-header > h1{
+
+header > h1 {
     color: red;
 }
-.logo-text{
-    color: #000
-}
-nav > ul {
-    display: flex;
-}
-nav > ul > li{
-    margin: 10px;
-    color: rgb(189, 87, 50);
-    list-style: none;
-}
-nav > ul >li > a {
-    text-decoration: none;
+
+.logo-text {
     color: #000;
 }
 
-nav > ul >li > a:hover{
-color:rgb(218, 124, 8)
-margin :  3px;
+nav > ul {
+    display: flex;
 }
-/*Hero styles*/
+
+nav > ul > li {
+    margin: 10px;
+    list-style: none;
+}
+
+nav > ul > li > a {
+    color: #000;
+    text-decoration: none;
+}
+
+nav > ul > li > a:hover {
+    color: rgb(218, 124, 8);
+}
+
+
 .hero {
-    background-image:linear-gradient(rgba(218,124,8,0.5),rgb(0,0,0,1)), url('images/Background\ Photo.jpg');
+    background-image: linear-gradient(rgba(218, 124, 8, 0.5), rgba(0, 0, 0, 1)), url("images/Background Photo.jpg");
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
     height: 80vh;
     text-align: center;
     padding: 6rem;
 }
+
 .hero > h1 {
     color: #fff;
     font-size: 3rem;
 }
 
-
-    .hero > p {
-        color: #fff;
-    }
-
-    .btn{
-        margin: 5px;
-        padding: 5px;
-        background-color: rgb(218, 124, 8);
-        border: none;
-        width: 90px;
-        border-radius: 5px;
-        color: white;
-        height: 30px;
-        cursor: pointer;
-    }
-    .btn:hover {
-        background-color: #fff;
-        color: rgb(218, 124, 8);
-    }
-
-    .btn-secondary{
-        background-color: white;
-        color: rgb(218, 124, 8);
-    }
-.btn-secondary:hover{
-    background-color: rgb(218, 124, 8);
-    color:#fff
+.hero > p {
+    color: #fff;
 }
-    
-.btn.container {
+
+.btn {
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(218, 124, 8);
+    border: none;
+    width: 90px;
+    border-radius: 5px;
+    color: #fff;
+    height: 30px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: rgb(218, 124, 8);
+}
+
+.btn-secondary {
+    background-color: #fff;
+    color: rgb(218, 124, 8);
+}
+
+.btn-secondary:hover {
+    background-color: rgb(218, 124, 8);
+    color: #fff;
+}
+
+.btn-container {
     margin-top: 3rem;
 }
-/*About section styles*/
-.about{
+
+
+section {
     text-align: center;
-    padding: 10px;
-    margin: 10px;
-    
+    padding: 20px;
+    min-height: 100vh;
 }
-section > h1{
+
+section > h1 {
     color: rgb(218, 124, 8);
     margin: 20px;
     font-size: 24px;
     font-style: italic;
 }
-    
-.container{
+
+.about {
+    margin: 10px;
+}
+
+.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
+
 .container > p {
     font-size: 18px;
     color: rgb(82, 80, 80);
 }
-.left-container>span>ul {
+
+.left-container > span > ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 20px;
 }
- left-container>span>ul>li {
-list-style: none;
-font-size: 24px;
-cursor: pointer;
+
+.left-container > span > ul > li {
+    list-style: none;
+    font-size: 24px;
+    cursor: pointer;
 }
-.left-container>span>ul>li:hover{
+
+.left-container > span > ul > li:hover {
     color: rgb(218, 124, 8);
 }
-.right-container > img{
+
+.right-container > img {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
-section{
-    text-align: center;
-    padding: 20px;
-    height: 100vh;
-    
-}
-/*Services section*/
-#services{
+
+
+#services {
     background-color: #d87979;
 }
 
-.cards{
-    border:1px solid white;
+.card {
+    flex: 1;
+    border: 1px solid #fff;
     margin: 10px;
     border-radius: 5px;
-    padding: 3px;
+    padding: 10px;
     box-shadow: 5px 5px 5px rgb(218, 124, 8);
+}
 
+.card > h2,
+.card > h1 {
+    font-size: 18px;
+    color: #fff;
 }
-.card > h2 {
-font-size: 18px;
-color: #fff
-}
+
 .card > p {
     font-size: 16px;
     font-style: italic;
-    color:#fff
+    color: #fff;
+}
 
+
+#projects {
+    background-color: #f7f1eb;
+}
+
+#projects > h1 {
+    color: rgb(218, 124, 8);
+    font-size: 28px;
+}
+
+#projects .container {
+    align-items: stretch;
+}
+
+#projects .card {
+    background-color: #fff;
+    border: 2px solid rgb(218, 124, 8);
+    padding: 25px;
+    box-shadow: 3px 3px 8px #c9c9c9;
+}
+
+#projects .card > h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#projects .card > p {
+    color: #555;
+    font-style: normal;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#projects .card > a {
+    display: inline-block;
+    background-color: rgb(218, 124, 8);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#projects .card > a:hover {
+    background-color: #333;
+}
+
+
+#testimonials {
+    background-color: #fffaf5;
+}
+
+#testimonials > h2 {
+    color: rgb(218, 124, 8);
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#testimonials .container {
+    align-items: stretch;
+}
+
+.testimonials-card {
+    flex: 1;
+    background-color: #fff;
+    border: 2px solid rgb(218, 124, 8);
+    border-radius: 5px;
+    padding: 25px;
+    box-shadow: 3px 3px 8px #c9c9c9;
+}
+
+.testimonials-card > h1 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.testimonials-card > p {
+    color: #555;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+
+#contact {
+    background-color: #f7f1eb;
+}
+
+#contact > h1 {
+    color: rgb(218, 124, 8);
+    font-size: 28px;
+}
+
+#contact > div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    text-align: left;
+}
+
+#contact ul {
+    list-style: none;
+    line-height: 2;
+}
+
+#contact form > div {
+    margin-bottom: 15px;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#contact input,
+#contact textarea {
+    width: 280px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+#contact textarea {
+    height: 100px;
+}
+
+footer {
+    background-color: rgb(218, 124, 8);
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
