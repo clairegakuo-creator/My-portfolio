@@ -4,22 +4,36 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary: #2C1E16;      /* Deep Espresso */
+    --bg-sand: #F5EFE6;      /* Warm Sand */
+    --accent: #C86D3B;       /* Warm Terracotta */
+    --surface: #FFFFFF;      /* Crisp White for Cards */
+    --text-muted: #5E4B3E;   /* Soft Espresso for Body Text */
+}
+
+body {
+    color: var(--primary);
+    background-color: var(--bg-sand);
+}
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: rgb(189, 87, 50);
-    height: 60px;
-    padding: 10px;
+    background-color: var(--primary);
+    color: var(--bg-sand);
+    height: 64px;
+    padding: 0 28px;
 }
 
 header > h1 {
-    color: red;
+    color: var(--accent);
+    font-size: 1.5rem;
 }
 
 .logo-text {
-    color: #000;
+    color: var(--bg-sand);
 }
 
 nav > ul {
@@ -32,76 +46,80 @@ nav > ul > li {
 }
 
 nav > ul > li > a {
-    color: #000;
+    color: var(--bg-sand);
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
 
 nav > ul > li > a:hover {
-    color: rgb(218, 124, 8);
+    color: var(--accent);
 }
 
-
 .hero {
-    background-image: linear-gradient(rgba(218, 124, 8, 0.5), rgba(0, 0, 0, 1)), url("images/Background Photo.jpg");
+    background-image: linear-gradient(rgba(44, 30, 22, 0.72), rgba(44, 30, 22, 0.92)), url("images/Background Photo.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 80vh;
     text-align: center;
-    padding: 6rem;
+    padding: 6rem 2rem;
 }
 
 .hero > h1 {
-    color: #fff;
+    color: var(--bg-sand);
     font-size: 3rem;
 }
 
 .hero > p {
-    color: #fff;
+    color: rgba(245, 239, 230, 0.85);
+    margin-top: 10px;
 }
 
 .btn {
     margin: 5px;
-    padding: 5px;
-    background-color: rgb(218, 124, 8);
+    padding: 8px 16px;
+    background-color: var(--accent);
     border: none;
-    width: 90px;
+    min-width: 100px;
     border-radius: 5px;
-    color: #fff;
-    height: 30px;
+    color: var(--surface);
+    font-weight: 600;
+    height: 38px;
     cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .btn:hover {
-    background-color: #fff;
-    color: rgb(218, 124, 8);
+    background-color: var(--bg-sand);
+    color: var(--primary);
 }
 
 .btn-secondary {
-    background-color: #fff;
-    color: rgb(218, 124, 8);
+    background-color: transparent;
+    border: 1.5px solid var(--bg-sand);
+    color: var(--bg-sand);
 }
 
 .btn-secondary:hover {
-    background-color: rgb(218, 124, 8);
-    color: #fff;
+    background-color: var(--bg-sand);
+    color: var(--primary);
 }
 
 .btn-container {
     margin-top: 3rem;
 }
 
-
 section {
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
     min-height: 100vh;
 }
 
 section > h1 {
-    color: rgb(218, 124, 8);
+    color: var(--primary);
     margin: 20px;
-    font-size: 24px;
+    font-size: 28px;
     font-style: italic;
 }
 
@@ -118,7 +136,7 @@ section > h1 {
 
 .container > p {
     font-size: 18px;
-    color: rgb(82, 80, 80);
+    color: var(--text-muted);
 }
 
 .left-container > span > ul {
@@ -132,10 +150,12 @@ section > h1 {
     list-style: none;
     font-size: 24px;
     cursor: pointer;
+    color: var(--primary);
+    transition: color 0.2s ease;
 }
 
 .left-container > span > ul > li:hover {
-    color: rgb(218, 124, 8);
+    color: var(--accent);
 }
 
 .right-container > img {
@@ -143,39 +163,49 @@ section > h1 {
     border-bottom-right-radius: 20px;
 }
 
-
 #services {
-    background-color: #d87979;
+    background-color: var(--primary);
+}
+
+#services > h1 {
+    color: var(--bg-sand);
 }
 
 .card {
     flex: 1;
-    border: 1px solid #fff;
+    background-color: var(--surface);
+    border: 1px solid rgba(44, 30, 22, 0.12);
     margin: 10px;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 5px 5px 5px rgb(218, 124, 8);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 4px 4px 12px rgba(44, 30, 22, 0.1);
+}
+
+#services .card {
+    background-color: rgba(245, 239, 230, 0.06);
+    border: 1px solid var(--accent);
+    box-shadow: 4px 4px 0px var(--accent);
 }
 
 .card > h2,
 .card > h1 {
     font-size: 18px;
-    color: #fff;
+    color: var(--accent);
+    margin-bottom: 8px;
 }
 
 .card > p {
     font-size: 16px;
     font-style: italic;
-    color: #fff;
+    color: var(--bg-sand);
 }
 
-
 #projects {
-    background-color: #f7f1eb;
+    background-color: var(--bg-sand);
 }
 
 #projects > h1 {
-    color: rgb(218, 124, 8);
+    color: var(--primary);
     font-size: 28px;
 }
 
@@ -184,19 +214,18 @@ section > h1 {
 }
 
 #projects .card {
-    background-color: #fff;
-    border: 2px solid rgb(218, 124, 8);
+    background-color: var(--surface);
+    border: 1.5px solid rgba(44, 30, 22, 0.12);
     padding: 25px;
-    box-shadow: 3px 3px 8px #c9c9c9;
 }
 
 #projects .card > h2 {
-    color: #333;
+    color: var(--primary);
     margin-bottom: 15px;
 }
 
 #projects .card > p {
-    color: #555;
+    color: var(--text-muted);
     font-style: normal;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -204,24 +233,25 @@ section > h1 {
 
 #projects .card > a {
     display: inline-block;
-    background-color: rgb(218, 124, 8);
-    color: #fff;
-    padding: 10px 15px;
+    background-color: var(--primary);
+    color: var(--bg-sand);
+    padding: 10px 16px;
     border-radius: 5px;
     text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
 }
 
 #projects .card > a:hover {
-    background-color: #333;
+    background-color: var(--accent);
 }
 
-
 #testimonials {
-    background-color: #fffaf5;
+    background-color: var(--surface);
 }
 
 #testimonials > h2 {
-    color: rgb(218, 124, 8);
+    color: var(--primary);
     font-size: 28px;
     margin-bottom: 20px;
 }
@@ -232,32 +262,32 @@ section > h1 {
 
 .testimonials-card {
     flex: 1;
-    background-color: #fff;
-    border: 2px solid rgb(218, 124, 8);
-    border-radius: 5px;
+    background-color: var(--bg-sand);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
     padding: 25px;
-    box-shadow: 3px 3px 8px #c9c9c9;
+    box-shadow: 3px 3px 10px rgba(44, 30, 22, 0.08);
 }
 
 .testimonials-card > h1 {
-    color: #333;
+    color: var(--primary);
     font-size: 20px;
     margin-bottom: 15px;
 }
 
 .testimonials-card > p {
-    color: #555;
+    color: var(--text-muted);
     font-style: italic;
     line-height: 1.6;
 }
 
-
+/* Contact Section & Form */
 #contact {
-    background-color: #f7f1eb;
+    background-color: var(--bg-sand);
 }
 
 #contact > h1 {
-    color: rgb(218, 124, 8);
+    color: var(--primary);
     font-size: 28px;
 }
 
@@ -265,40 +295,112 @@ section > h1 {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    flex-wrap: wrap;
     gap: 40px;
     text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 #contact ul {
     list-style: none;
-    line-height: 2;
+    line-height: 2.2;
+    color: var(--primary);
+}
+
+#contact form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 440px;
+    background-color: var(--surface);
+    padding: 28px;
+    border-radius: 10px;
+    border: 1px solid rgba(44, 30, 22, 0.12);
+    box-shadow: 0 8px 24px rgba(44, 30, 22, 0.08);
 }
 
 #contact form > div {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 #contact label {
     display: block;
-    margin-bottom: 5px;
-    color: #333;
+    margin-bottom: 6px;
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
 #contact input,
 #contact textarea {
-    width: 280px;
-    padding: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
+    width: 100%;
+    padding: 11px 14px;
+    background-color: var(--bg-sand);
+    color: var(--primary);
+    border: 1.5px solid rgba(44, 30, 22, 0.2);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline: none;
+    background-color: var(--surface);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(200, 109, 59, 0.25);
 }
 
 #contact textarea {
-    height: 100px;
+    height: 120px;
+    resize: vertical;
+}
+
+#contact button[type="submit"],
+#contact .btn {
+    width: 100%;
+    height: 42px;
+    margin: 4px 0 0;
+    background-color: var(--primary);
+    color: var(--bg-sand);
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+#contact button[type="submit"]:hover,
+#contact .btn:hover {
+    background-color: var(--accent);
+    color: var(--surface);
 }
 
 footer {
-    background-color: rgb(218, 124, 8);
-    color: white;
+    background-color: var(--primary);
+    color: var(--bg-sand);
     text-align: center;
     padding: 20px;
+}
+/* Quick links in footer (dark espresso background -> warm sand links) */
+footer a {
+    color: var(--bg-sand);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+/* Quick/contact links inside #contact (warm sand background -> deep espresso links) */
+#contact a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+#contact a:hover {
+    color: var(--accent);
 }
